@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class PacketController</title>
+
+	<script type="text/javascript" src="resources/combined.js?2410480244"></script>
+	<script type="text/javascript" src="elementlist.js?3292114069"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-AdminDonationController.html">AdminDonationController</a></li>
+				<li><a href="class-AdminImageController.html">AdminImageController</a></li>
+				<li><a href="class-AdminItemController.html">AdminItemController</a></li>
+				<li><a href="class-AdminPacketController.html">AdminPacketController</a></li>
+				<li><a href="class-AdminReturnController.html">AdminReturnController</a></li>
+				<li><a href="class-AdminUserController.html">AdminUserController</a></li>
+				<li><a href="class-BaseController.html">BaseController</a></li>
+				<li><a href="class-CategoryController.html">CategoryController</a></li>
+				<li><a href="class-DonationController.html">DonationController</a></li>
+				<li><a href="class-ItemController.html">ItemController</a></li>
+				<li class="active"><a href="class-PacketController.html">PacketController</a></li>
+				<li><a href="class-PostingController.html">PostingController</a></li>
+				<li><a href="class-ReturnController.html">ReturnController</a></li>
+				<li><a href="class-SessionController.html">SessionController</a></li>
+				<li><a href="class-SiteController.html">SiteController</a></li>
+				<li><a href="class-TagController.html">TagController</a></li>
+				<li><a href="class-UserController.html">UserController</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class PacketController</h1>
+
+
+	<div class="description">
+	
+<p>Controller responsible for all front-end features related to the 'donations'
+table.</p>
+
+<p>Include CRUD for 'packets' table.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+Controller
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-BaseController.html"><span>BaseController</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>PacketController</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+		<b>Located at</b> <a href="source-class-PacketController.html#3-266" title="Go to source code">PacketController.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PacketController.html#16-26" title="Go to source code">__construct</a>( <span>Packet <var>$packet</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inject the models. (the controller is always instatiated by the framework, so
+there's no need to call it in most situations)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inject the models. (the controller is always instatiated by the framework, so
+there's no need to call it in most situations)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$packet</var></dt>
+					<dd><code>Packet</code><br>$packet</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getItemPackets" id="_getItemPackets">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getItemPackets">#</a>
+		<code><a href="source-class-PacketController.html#28-44" title="Go to source code">getItemPackets</a>( <span>integer <var>$itemId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieves all packets of a specific item (lists only available packets).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves all packets of a specific item (lists only available packets).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$itemId</var></dt>
+					<dd><code>integer</code><br>$itemId Specific item id.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequests" id="_getRequests">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequests">#</a>
+		<code><a href="source-class-PacketController.html#46-88" title="Go to source code">getRequests</a>( <span>String <var>$requestType</var></span>, <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>For a specific user, retrieves all requests of that user.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>For a specific user, retrieves all requests of that user.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestType</var></dt>
+					<dd><code>String</code><br>$requestType Type of request.</dd>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id User id.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPacketHistory" id="_getPacketHistory">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPacketHistory">#</a>
+		<code><a href="source-class-PacketController.html#90-118" title="Go to source code">getPacketHistory</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the history of a packet.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the history of a packet.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id Packet id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="showPacketHistory" id="_showPacketHistory">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_showPacketHistory">#</a>
+		<code><a href="source-class-PacketController.html#120-134" title="Go to source code">showPacketHistory</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Renders packet history page.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renders packet history page.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id Packet id.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="releaseOverduePackets" id="_releaseOverduePackets">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_releaseOverduePackets">#</a>
+		<code><a href="source-class-PacketController.html#136-162" title="Go to source code">releaseOverduePackets</a>( )</code>
+
+		<div class="description short">
+			
+<p>Static function that is called every time a page is loaded. (could be called
+once a day, for example) - should be a cronjob.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Static function that is called every time a page is loaded. (could be called
+once a day, for example) - should be a cronjob.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-PacketController.html#164-207" title="Go to source code">delete</a>( <span>mixed <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Cancel packet request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cancel packet request.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>mixed</code><br>$id int Packet id.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteAll" id="_deleteAll">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteAll">#</a>
+		<code><a href="source-class-PacketController.html#209-265" title="Go to source code">deleteAll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Cancel many borrowing requests (using post data). Allows only creator and
+administrators to delete packets requests.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cancel many borrowing requests (using post data). Allows only creator and
+administrators to delete packets requests.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-BaseController.html#methods">BaseController</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-BaseController.html#_setupLayout">setupLayout()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="packet" id="$packet">
+		<td class="attributes"><code>
+			protected  
+			Packet
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PacketController.html#10-14" title="Go to source code"><var>$packet</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$packet" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Packet Model</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Packet Model</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

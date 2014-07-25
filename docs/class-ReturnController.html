@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ReturnController</title>
+
+	<script type="text/javascript" src="resources/combined.js?2410480244"></script>
+	<script type="text/javascript" src="elementlist.js?3292114069"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-AdminDonationController.html">AdminDonationController</a></li>
+				<li><a href="class-AdminImageController.html">AdminImageController</a></li>
+				<li><a href="class-AdminItemController.html">AdminItemController</a></li>
+				<li><a href="class-AdminPacketController.html">AdminPacketController</a></li>
+				<li><a href="class-AdminReturnController.html">AdminReturnController</a></li>
+				<li><a href="class-AdminUserController.html">AdminUserController</a></li>
+				<li><a href="class-BaseController.html">BaseController</a></li>
+				<li><a href="class-CategoryController.html">CategoryController</a></li>
+				<li><a href="class-DonationController.html">DonationController</a></li>
+				<li><a href="class-ItemController.html">ItemController</a></li>
+				<li><a href="class-PacketController.html">PacketController</a></li>
+				<li><a href="class-PostingController.html">PostingController</a></li>
+				<li class="active"><a href="class-ReturnController.html">ReturnController</a></li>
+				<li><a href="class-SessionController.html">SessionController</a></li>
+				<li><a href="class-SiteController.html">SiteController</a></li>
+				<li><a href="class-TagController.html">TagController</a></li>
+				<li><a href="class-UserController.html">UserController</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class ReturnController</h1>
+
+
+	<div class="description">
+	
+<p>Controller responsible for all front-end features related to the 'returns'
+table.</p>
+
+<p>Include CRUD for 'returns' table.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+Controller
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-BaseController.html"><span>BaseController</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>ReturnController</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+		<b>Located at</b> <a href="source-class-ReturnController.html#3-311" title="Go to source code">ReturnController.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-ReturnController.html#16-26" title="Go to source code">__construct</a>( <span>Returning <var>$return</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inject the models. (the controller is always instatiated by the framework, so
+there's no need to call it in most situations)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inject the models. (the controller is always instatiated by the framework, so
+there's no need to call it in most situations)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$return</var></dt>
+					<dd><code>Returning</code><br>$return</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCreate" id="_getCreate">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCreate">#</a>
+		<code><a href="source-class-ReturnController.html#28-40" title="Go to source code">getCreate</a>( )</code>
+
+		<div class="description short">
+			
+<p>Displays return's creation form.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Displays return's creation form.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="postCreate" id="_postCreate">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_postCreate">#</a>
+		<code><a href="source-class-ReturnController.html#42-104" title="Go to source code">postCreate</a>( )</code>
+
+		<div class="description short">
+			
+<p>Saves a newly created return. Redirects to creation page and displays the
+results.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Saves a newly created return. Redirects to creation page and displays the
+results.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEdit" id="_getEdit">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEdit">#</a>
+		<code><a href="source-class-ReturnController.html#106-127" title="Go to source code">getEdit</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Renders a return edit page.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renders a return edit page.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id Return id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="postEdit" id="_postEdit">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_postEdit">#</a>
+		<code><a href="source-class-ReturnController.html#129-196" title="Go to source code">postEdit</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Updates an existing return. Redirects to return edit page, showing the
+results of the update.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Updates an existing return. Redirects to return edit page, showing the
+results of the update.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id Return id.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-ReturnController.html#198-236" title="Go to source code">delete</a>( <span>mixed <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove the specified resource from storage.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove the specified resource from storage.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>mixed</code><br>$id Return id.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReturn" id="_getReturn">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReturn">#</a>
+		<code><a href="source-class-ReturnController.html#238-247" title="Go to source code">getReturn</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieves a specific return's data.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves a specific return's data.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id Return id.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAll" id="_getAll">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAll">#</a>
+		<code><a href="source-class-ReturnController.html#249-257" title="Go to source code">getAll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Retrieves all returns.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves all returns.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteAll" id="_deleteAll">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteAll">#</a>
+		<code><a href="source-class-ReturnController.html#259-310" title="Go to source code">deleteAll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Cancel many return requests (post data). Allows only creator and
+administrators to delete a return request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cancel many return requests (post data). Allows only creator and
+administrators to delete a return request.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-BaseController.html#methods">BaseController</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-BaseController.html#_setupLayout">setupLayout()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="return" id="$return">
+		<td class="attributes"><code>
+			protected  
+			Return
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-ReturnController.html#10-14" title="Go to source code"><var>$return</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$return" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Return Model</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return Model</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

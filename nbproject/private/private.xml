@@ -3,15 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/UserController.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/items/search.blade.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/routes.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/admin/donations/create_edit.blade.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/SessionController.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/ItemController.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/Admin/AdminItemController.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/users/activate.blade.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/layouts/default.blade.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/Admin/AdminPacketController.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/login-modal.blade.php</file>
             <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/login.blade.php</file>
         </group>

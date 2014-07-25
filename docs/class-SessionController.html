@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class SessionController</title>
+
+	<script type="text/javascript" src="resources/combined.js?2410480244"></script>
+	<script type="text/javascript" src="elementlist.js?3292114069"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-AdminDonationController.html">AdminDonationController</a></li>
+				<li><a href="class-AdminImageController.html">AdminImageController</a></li>
+				<li><a href="class-AdminItemController.html">AdminItemController</a></li>
+				<li><a href="class-AdminPacketController.html">AdminPacketController</a></li>
+				<li><a href="class-AdminReturnController.html">AdminReturnController</a></li>
+				<li><a href="class-AdminUserController.html">AdminUserController</a></li>
+				<li><a href="class-BaseController.html">BaseController</a></li>
+				<li><a href="class-CategoryController.html">CategoryController</a></li>
+				<li><a href="class-DonationController.html">DonationController</a></li>
+				<li><a href="class-ItemController.html">ItemController</a></li>
+				<li><a href="class-PacketController.html">PacketController</a></li>
+				<li><a href="class-PostingController.html">PostingController</a></li>
+				<li><a href="class-ReturnController.html">ReturnController</a></li>
+				<li class="active"><a href="class-SessionController.html">SessionController</a></li>
+				<li><a href="class-SiteController.html">SiteController</a></li>
+				<li><a href="class-TagController.html">TagController</a></li>
+				<li><a href="class-UserController.html">UserController</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SessionController</h1>
+
+
+	<div class="description">
+	
+<p>Controller responsible for session management (login, logout).</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+Controller
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-BaseController.html"><span>BaseController</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>SessionController</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+		<b>Located at</b> <a href="source-class-SessionController.html#3-93" title="Go to source code">SessionController.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="create" id="_create">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create">#</a>
+		<code><a href="source-class-SessionController.html#8-31" title="Go to source code">create</a>( <span>boolean <var>$iframe</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Show the form for creating a new resource. Will render the page in its modal
+version if inside iframe; otherwise, renders normal version (default
+layout).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Show the form for creating a new resource. Will render the page in its modal
+version if inside iframe; otherwise, renders normal version (default
+layout).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$iframe</var></dt>
+					<dd><code>boolean</code><br>$iframe Flag that indicates whether iframe version should be rendered or not.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="store" id="_store">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_store">#</a>
+		<code><a href="source-class-SessionController.html#33-78" title="Go to source code">store</a>( <span>boolean <var>$iframe</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Store a newly created resource in storage. Likewise <i>create</i> method,
+uses a flag to indicate iframe usage. In case of errors, goes back to login
+page. Otherwise, goes to the intended page (that requires auth)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Store a newly created resource in storage. Likewise <i>create</i> method,
+uses a flag to indicate iframe usage. In case of errors, goes back to login
+page. Otherwise, goes to the intended page (that requires auth)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$iframe</var></dt>
+					<dd><code>boolean</code><br>$iframe Flag that indicates iframe usage.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="destroy" id="_destroy">
+
+		<td class="attributes"><code>
+			 public 
+			Response
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_destroy">#</a>
+		<code><a href="source-class-SessionController.html#80-91" title="Go to source code">destroy</a>( )</code>
+
+		<div class="description short">
+			
+<p>Destroy the session (i.e. logs user out). Redirect to home page.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Destroy the session (i.e. logs user out). Redirect to home page.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Response</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-BaseController.html#methods">BaseController</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-BaseController.html#_setupLayout">setupLayout()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
