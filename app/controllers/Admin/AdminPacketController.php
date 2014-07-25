@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Controller responsible for all back-end features related to the 'donations' table.
+ *
+ * Include CRUD for 'packets' table, with greater permissions than the front-end.
+ */
 class AdminPacketController extends BaseController {
 
         /**
@@ -9,9 +14,12 @@ class AdminPacketController extends BaseController {
         protected $packet;
     
 	/**
-        * Inject the models.
-        * @param Packet $packet
-        */
+         * Inject the models.
+         * (the controller is always instatiated by the framework, so there's no 
+         * need to call it in most situations)
+         * 
+         * @param Packet $packet
+         */
        public function __construct(Packet $packet)
        {
            $this->packet = $packet;
@@ -62,6 +70,7 @@ class AdminPacketController extends BaseController {
         /**
 	 * Store a newly registered packet into the database.
 	 *
+         * @param String $type Accession type.
 	 * @return Response
 	 */
 	public function postCreate($type)
@@ -111,8 +120,11 @@ class AdminPacketController extends BaseController {
 	}
         
         /**
-        * Updates user record.
-        * @param int $id
+         * Updates a specific packet record.
+         * 
+         * @param int $id Packet id.
+         * @param String $type Accession type.
+         * @return Response
         */
         public function postEdit($id, $type)
         {
@@ -163,8 +175,9 @@ class AdminPacketController extends BaseController {
 	}
         
         /**
-	 * Show the form for lending a packet.
+	 * Renders form for lending a packet.
 	 *
+         * @param int $id Packet id.
 	 * @return Response
 	 */
         public function getLending($id)
@@ -181,7 +194,7 @@ class AdminPacketController extends BaseController {
         }
         
         /**
-	 * Store a newly registered lending into the database.
+	 * Stores a newly registered lending into the database.
 	 *
 	 * @return Response
 	 */
@@ -232,26 +245,22 @@ class AdminPacketController extends BaseController {
 	}
         
         /**
-         *  Retrieve all packets records formatted for DataTables.
+         * Retrieves all packets records formatted for DataTables.
          * 
-         * @return Datatables JSON
-         */
-        // LISTING ONLY AVAILABLE PACKETS!!!
+         * @param String $keyword Search terms.
+         * @return JSON\Datatables
+         */        
         public function getListByName($keyword = false)
-        {   
-            // Workaround to make 'orWhere' work
-            global $parameter;
-            $parameter = $keyword;
-            
-            // Query the database
+        {            
+            // Query the database - LISTING ONLY AVAILABLE PACKETS!!!
             $packets = Packet::select(array('packets.id', 'items.family', 'packets.amount', 'packets.germination_ratio', 'packets.date_harvest', 'packets.grow_location', 'items.species', 'items.variety'))
                              ->join('accessions', 'accessions.id', '=', 'packets.accession_id')
                              ->join('items', 'items.id', '=', 'accessions.item_id')
                              ->whereNull('borrower_id')
-                             ->where(function($query)
+                             ->where(function($query) use ($keyword)
                              {
                                 // Change query according to entered search
-                                $params = explode('-', $GLOBALS['parameter']);
+                                $params = explode('-', $keyword);
                                 
                                 // Remove white spaces
                                 foreach($params as &$param)
@@ -269,9 +278,9 @@ class AdminPacketController extends BaseController {
                                           ->where('items.variety', 'LIKE', "%".$params[2]."%");
                                 } else 
                                 {   // Search was only a keyword                                 
-                                    $query->where('items.family', 'LIKE', "%".$GLOBALS['parameter']."%")
-                                          ->orWhere('items.species', 'LIKE', "%".$GLOBALS['parameter']."%")
-                                          ->orWhere('items.variety', 'LIKE', "%".$GLOBALS['parameter']."%");
+                                    $query->where('items.family', 'LIKE', "%".$keyword."%")
+                                          ->orWhere('items.species', 'LIKE', "%".$keyword."%")
+                                          ->orWhere('items.variety', 'LIKE', "%".$keyword."%");
                                 }
                              });
 
@@ -291,9 +300,9 @@ class AdminPacketController extends BaseController {
         }
         
          /**
-         *  Retrieve all lending records formatted for DataTables.
+         * Retrieves all lending records formatted for DataTables.
          * 
-         * @return Datatables JSON
+         * @return JSON\Datatables
          */
         public function getLentPackets()
         {
@@ -318,10 +327,10 @@ class AdminPacketController extends BaseController {
             ->make();
         }
         
-         /**
-         *  Retrieve all requests records formatted for DataTables.
+        /**
+         * Retrieve all requests records formatted for DataTables.
          * 
-         * @return Datatables JSON
+         * @return JSON\Datatables
          */
         public function getRequestedPackets()
         {
@@ -351,7 +360,10 @@ class AdminPacketController extends BaseController {
         }
         
         /**
-         *  Display the history of a specific packet.
+         * Displays the history of a specific packet.
+         * 
+         * @param int $id Packet id.
+         * @return Response
          */
         public function showPacketHistory($id)
         {
@@ -368,9 +380,9 @@ class AdminPacketController extends BaseController {
         }
         
         /**
-        * Cancel packet request.
+        * Cancel a packet request.
         *
-        * @param $id
+        * @param int $id Packet id.
         * @return Response
         */
        public function delete($id)
@@ -400,7 +412,7 @@ class AdminPacketController extends BaseController {
        }
        
        /**
-        * Remove all specified resources from storage.
+        * Removes all specified resources from storage.
         * 
         * @return Response
         */

@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Controller responsible for all back-end features related to the 'users' table.
+ */
 class AdminUserController extends BaseController {
 
 	/**
@@ -10,6 +13,9 @@ class AdminUserController extends BaseController {
 
         /**
          * Inject the models.
+         * (the controller is always instatiated by the framework, so there's no 
+         * need to call it in most situations)
+         * 
          * @param User $user
          */
         public function __construct(User $user)
@@ -18,7 +24,9 @@ class AdminUserController extends BaseController {
         }
     
         /**
-	*   Display all the registered users.
+         * Display all the registered users.
+         * 
+         * @return Response
 	*/
         public function getIndex()
         {
@@ -29,7 +37,7 @@ class AdminUserController extends BaseController {
         }
         
         /**
-	 * Show the form for inserting a new user.
+	 * Renders the form for creating a new user.
 	 *
 	 * @return Response
 	 */
@@ -43,7 +51,8 @@ class AdminUserController extends BaseController {
 	}
         
         /**
-	 * Store a newly registered user into the database.
+	 * Stores a newly registered user into the database. Redirects to creation
+         * page with status messages.
 	 *
 	 * @return Response
 	 */
@@ -116,8 +125,10 @@ class AdminUserController extends BaseController {
 	}
         
         /**
-        * Renders update form.
-        * @param int $id
+         * Renders update form for a specific user.
+         * 
+         * @param int $id User id.
+         * @return Response
         */
        public function getEdit($id)
        {
@@ -134,8 +145,10 @@ class AdminUserController extends BaseController {
        }
        
        /**
-        * Updates user record.
-        * @param int $id
+        * Updates user record. Redirects to update form with status messages.
+        * 
+        * @param int $id User id.
+        * @return Response
         */
        public function postEdit($id)
        {
@@ -214,8 +227,8 @@ class AdminUserController extends BaseController {
        /**
         * Remove the specified resource from storage.
         *
-        * @param $id
-        * @return Response
+        * @param int $id User id.
+        * @return JSON
         */
        public function delete($id)
        {
@@ -244,9 +257,9 @@ class AdminUserController extends BaseController {
        }
        
        /**
-        * Remove all specified resources from storage.
+        * Remove all specified resources from storage, using POST data.
         * 
-        * @return Response
+        * @return JSON
         */
        public function deleteAll()
        {
@@ -288,9 +301,9 @@ class AdminUserController extends BaseController {
        }
         
         /**
-         *  Retrieve all users records formatted for DataTables.
+         * Retrieves all users records formatted for DataTables.
          * 
-         * @return Datatables JSON
+         * @return JSON\Datatables
          */
         public function getData()
         {
@@ -308,10 +321,12 @@ class AdminUserController extends BaseController {
         }
         
         /**
-         *  Retrieve all eligible borrowers name formatted for auto-completion.
+         * Retrieves all eligible borrowers name formatted for auto-completion.
          * 
          * @param String $name Specified name.
          * @return JSON
+         * 
+         * @todo Find out what 'eligible' means and implement the change.
          */
         public function getBorrowers($name)
         {
@@ -324,7 +339,7 @@ class AdminUserController extends BaseController {
         }
         
         /**
-         *  Retrieve all donors's name formatted for auto-completion.
+         * Retrieves all donors's names formatted for auto-completion.
          * 
          * @param String $name Specified name.
          * @return JSON

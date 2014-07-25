@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Controller responsible for operations over images.
+ */
 class AdminImageController extends BaseController {
 
         /**
@@ -10,6 +13,7 @@ class AdminImageController extends BaseController {
     
 	/**
         * Inject the models.
+        * 
         * @param Image $image
         */
        public function __construct(Image $image)
@@ -18,10 +22,10 @@ class AdminImageController extends BaseController {
        }
        
        /**
-        * Remove the specified resource from storage.
+        * Removes the specified resource from storage.
         *
-        * @param $id
-        * @return JSON Response
+        * @param int $id Image id.
+        * @return JSON
         */
         public function delete($id)
         {

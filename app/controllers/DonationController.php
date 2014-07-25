@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Controller responsible for all front-end features related to the 'donations' table.
+ *
+ * Include CRUD for 'donations' table.
+ */
 class DonationController extends BaseController {
 
 	/**
@@ -10,6 +15,9 @@ class DonationController extends BaseController {
 
         /**
          * Inject the models.
+         * (the controller is always instatiated by the framework, so there's no 
+         * need to call it in most situations)
+         * 
          * @param Donation $donation
          */
         public function __construct(Donation $donation)
@@ -18,7 +26,9 @@ class DonationController extends BaseController {
         }
     
         /**
-	*   Display donation's profile page.
+	* Displays donation's creation form.
+        * 
+        * @return Response
 	*/
         public function getCreate()
         {
@@ -30,7 +40,10 @@ class DonationController extends BaseController {
         }
         
         /**
-	*   Save a new donation.
+	* Saves a newly created donation. Redirects to creation page and
+        * displays the results.
+        * 
+        * @return Response
 	*/
         public function postCreate()
         {
@@ -98,7 +111,10 @@ class DonationController extends BaseController {
         }
         
         /**
-	*   Display donation's profile page.
+	* Renders a donation edit page.
+        *         
+        * @param int $id Donation id
+        * @return Response
 	*/
         public function getEdit($id)
         {
@@ -118,7 +134,11 @@ class DonationController extends BaseController {
         }
         
         /**
-	*   Update an existing donation.
+	* Updates an existing donation. Redirects to donation edit page, showing
+        * the results of the update.
+        * 
+        * @param int $id Donation id.
+        * @return Response
 	*/
         public function postEdit($id)
         {
@@ -193,8 +213,8 @@ class DonationController extends BaseController {
         /**
         * Remove the specified resource from storage.
         *
-        * @param $id
-        * @return Response
+        * @param $id Donation id.
+        * @return JSON
         */
        public function delete($id)
        {
@@ -232,8 +252,9 @@ class DonationController extends BaseController {
        }
         
         /**
-         *  Retrive a specific donation's data.
+         * Retrieves a specific donation's data.
          * 
+         * @param int $id Donation id.
          * @return JSON
          */
         public function getDonation($id)
@@ -242,19 +263,20 @@ class DonationController extends BaseController {
         }
         
         /**
-         *  Retrive all donations.
-         * 
-         * @return JSON
-         */
+        * Retrieves all donations.
+        * 
+        * @return JSON
+        */
         public function getAll()
         {
             return Donation::all();
         }
         
         /**
-        * Cancel many donation requests.
+        * Cancel many donation requests (post data). Allows only creator and
+        * administrators to delete a donation request.
         * 
-        * @return Response
+        * @return JSON
         */
        public function deleteAll()
        {

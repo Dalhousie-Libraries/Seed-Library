@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Controller responsible for all front-end features related to the 'donations' table.
+ *
+ * Include CRUD for 'packets' table.
+ */
 class PacketController extends BaseController {
 
 	/**
@@ -10,6 +15,9 @@ class PacketController extends BaseController {
 
         /**
          * Inject the models.
+         * (the controller is always instatiated by the framework, so there's no 
+         * need to call it in most situations)
+         * 
          * @param Packet $packet
          */
         public function __construct(Packet $packet)
@@ -18,8 +26,9 @@ class PacketController extends BaseController {
         }
         
         /**
-         *  Retrieve all packets of an item (lists only available packets).
+         * Retrieves all packets of a specific item (lists only available packets).
          * 
+         * @param int $itemId Specific item id.
          * @return JSON
          */
         public function getItemPackets($itemId)
@@ -35,15 +44,15 @@ class PacketController extends BaseController {
         }
         
         /**
-         *  Retrieve all user's requests.
+         * For a specific user, retrieves all requests of that user.
          * 
-         * @param int User id
-         * 
+         * @param String $requestType Type of request.
+         * @param int $id User id.
          * @return JSON
          */
-        public function getRequests($action, $id) 
+        public function getRequests($requestType, $id) 
         {
-            switch($action)
+            switch($requestType)
             {
                 case 'lendings':
                     return 
@@ -79,7 +88,7 @@ class PacketController extends BaseController {
         }
         
         /**
-         * Returns packet history.
+         * Returns the history of a packet.
          * 
          * @param int $id Packet id
          * @return JSON
@@ -109,9 +118,14 @@ class PacketController extends BaseController {
         }
         
         /**
-         *  Returns packet history page.
+         *  Renders packet history page.
+         * 
+         * @param int $id Packet id.
+         * @return Response
+         * 
+         * @todo Finish implementation, create view (similar to admin version).
          */
-        public function showPacketHistory()
+        public function showPacketHistory($id)
         {
             // Title 
             $title = 'Packet history';
@@ -119,9 +133,12 @@ class PacketController extends BaseController {
             return View::make('', compact('title'));
         }
         
-        /*
-         *  Static function that is called every time a page is loaded.
-         * (could be called once a day, for example). 
+        /**
+         * Static function that is called every time a page is loaded.
+         * (could be called once a day, for example) - should be a cronjob. 
+         * 
+         * @todo Create a command, move this method to the created command and 
+         * create a cronjob to execute it once a day.
          */
         public static function releaseOverduePackets()
         {
@@ -147,7 +164,7 @@ class PacketController extends BaseController {
         /**
         * Cancel packet request.
         *
-        * @param $id
+        * @param $id int Packet id.
         * @return Response
         */
        public function delete($id)
@@ -190,9 +207,10 @@ class PacketController extends BaseController {
        }
        
        /**
-        * Cancel many packet requests.
+        * Cancel many borrowing requests (using post data). Allows only creator 
+        * and administrators to delete packets requests.
         * 
-        * @return Response
+        * @return JSON
         */
        public function deleteAll()
        {

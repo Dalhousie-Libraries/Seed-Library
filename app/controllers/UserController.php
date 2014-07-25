@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Includes all features related to the 'users' table.
+ * Controller responsible for all front-end features related to the 'users' table.
  * 
  * Generates front-end content, including 'sign up', 'my profile' and 
  * 'my requests'.
@@ -26,7 +26,9 @@ class UserController extends BaseController {
         }
     
         /**
-	*   Display user's profile page.
+	* Display logged in user's profile page.
+        * 
+        * @return Response
 	*/
         public function getIndex()
         {
@@ -42,7 +44,7 @@ class UserController extends BaseController {
         }
         
         /**
-	 * Show the form for registering a new user.
+	 * Show the form for registering a new user (sign up form).
 	 *
 	 * @return Response
 	 */
@@ -59,7 +61,9 @@ class UserController extends BaseController {
 	}
         
         /**
-	 * Store a newly registered user into the database.
+	 * Store a newly registered user into the database (sign up form post).
+         * Redirect to the login page in case of success. Otherwise, goes back
+         * to the sign up form, displaying the errors that occurred.
 	 *
 	 * @return Response
 	 */
@@ -134,7 +138,10 @@ class UserController extends BaseController {
 	}
        
        /**
-        * Updates user record.
+        * Updates user record. Returns to the logged in user profile page and 
+        * shows a status message.
+        * 
+        * @return Response
         */
        public function postEdit()
        {
@@ -209,7 +216,9 @@ class UserController extends BaseController {
        }
         
         /**
-         *  Show all user's requests.
+         *  Show all user's requests, including borrowings, donations and returns.
+         * 
+         * @return Response 
          */
         public function getRequests()
         {
@@ -221,7 +230,11 @@ class UserController extends BaseController {
         }
         
         /**
-         *  Show the retrieve password form.
+         *  Show the retrieve password form. It's used to give access to users
+         * that were registered by the administrators and do not know their
+         * passwords.
+         * 
+         * @return Response
          */
         public function getPassword()
         {
@@ -293,7 +306,10 @@ class UserController extends BaseController {
         
         /**
          * Activates a user account; afterwards, renders password form.
-         * @param type $token
+         * @param String $token Activation token.
+         * 
+         * @todo Render change password form.
+         * @return Response
          */
         public function activateAccount($token)
         {
@@ -305,6 +321,5 @@ class UserController extends BaseController {
                 return App::abort(404, 'Invalid token.');
             
             // Render change password form
-            
         }
 }

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Controller responsible for all back-end features related to the 'returns' table.
+ *
+ * Include CRUD for 'returns' table, with greater permissions than the front-end.
+ */
 class AdminReturnController extends BaseController {
 
         /**
@@ -9,16 +14,21 @@ class AdminReturnController extends BaseController {
         protected $return;
     
 	/**
-        * Inject the models.
-        * @param Returning $return
-        */
+         * Inject the models.
+         * (the controller is always instatiated by the framework, so there's no 
+         * need to call it in most situations)
+         * 
+         * @param Returning $return
+         */
        public function __construct(Returning $return)
        {
            $this->return = $return;
        }
     
         /**
-	*   Display all the registered returns.
+	 * List all the registered returns.
+         * 
+         * @return Response
 	*/
         public function getIndex()
         {
@@ -29,7 +39,7 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-	 * Show the form for registering a new return.
+	 * Renders form for registering a new return.
 	 *
 	 * @return Response
 	 */
@@ -57,7 +67,7 @@ class AdminReturnController extends BaseController {
        }
         
         /**
-	 * Store a newly registered return into the database.
+	 * Stores a newly registered return into the database.
 	 *
 	 * @return Response
 	 */
@@ -122,8 +132,10 @@ class AdminReturnController extends BaseController {
 	}
         
         /**
-        * Renders update form.
-        * @param int $id
+         * Renders return update form.
+         * 
+         * @param int $id Return id.
+         * @return Response
         */
        public function getEdit($id)
        {
@@ -140,8 +152,10 @@ class AdminReturnController extends BaseController {
        }
        
        /**
-        * Updates user record.
-        * @param int $id
+        * Updates return record.
+        * 
+        * @param int $id Return id.
+        * @return Response
         */
        public function postEdit($id)
 	{
@@ -203,8 +217,9 @@ class AdminReturnController extends BaseController {
 	}
         
         /**
-	 * Show the form for checking in a return.
+	 * Renders form for checking in a return.
 	 *
+         * @param int $id Return id.
 	 * @return Response
 	 */
         public function getCheckIn($id)
@@ -221,7 +236,7 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-	 * Store a newly checked in return into the database.
+	 * Stores a newly checked in return into the database.
 	 *
 	 * @return Response
 	 */
@@ -265,9 +280,9 @@ class AdminReturnController extends BaseController {
 	}
         
         /**
-         *  Retrieve all returns records formatted for DataTables.
+         * Retrieves all returns records formatted for DataTables.
          * 
-         * @return Datatables JSON
+         * @return JSON\Datatables
          */
         public function getUserPackets($name)
         {
@@ -293,9 +308,9 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-         *  Retrieve all returns records formatted for DataTables.
+         * Retrieves all returns records formatted for DataTables.
          * 
-         * @return Datatables JSON
+         * @return JSON\Datatables
          */
         public function getReturnedPackets()
         {
@@ -321,9 +336,9 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-         *  Retrieve all return requests records formatted for DataTables.
+         * Retrieves all return requests records formatted for DataTables.
          * 
-         * @return Datatables JSON
+         * @return JSON\Datatables
          */
         public function getRequestedPackets()
         {
