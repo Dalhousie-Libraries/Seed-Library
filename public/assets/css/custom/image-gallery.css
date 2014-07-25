@@ -1,0 +1,63 @@
+ul {         
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+}
+ul li {     
+    list-style:none;
+
+}
+ul li img {
+    cursor: pointer;
+    margin-bottom:25px;
+}
+.modal-body {
+    padding:5px !important;
+}
+.modal-content {
+    border-radius:0;
+}
+.modal-dialog img {
+    text-align:center;
+    margin:0 auto;
+}
+.controls{          
+    width:50px;
+    display:block;
+    font-size:11px;
+    padding-top:8px;
+    font-weight:bold;
+}
+.next {
+    float:right;
+    text-align:right;
+}
+
+.delete {
+    position:absolute; 
+    top: 0px; 
+    left: 165px; 
+    color: #fff;
+}
+
+.delete:hover {
+    color: #999;
+    cursor: url('../../img/icons/delete.png'), auto;
+}
+
+
+/*override modal for demo only*/
+.modal-dialog {
+    max-width:500px;
+    padding-top: 90px;
+}
+@media screen and (min-width: 768px){
+    .modal-dialog {
+        width:500px;
+        padding-top: 90px;
+    }          
+}
+@media screen and (max-width:1500px){
+    #ads {
+        display:none;
+    }
+}

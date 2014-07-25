@@ -1,0 +1,87 @@
+1,Edible,Asteraceae,Lettuce,Amish Deer Tongue,,Incredible Seeds,11,Easy,2013
+2,Edible,Asteraceae,Lettuce,Buttercrunch,,Incredible Seeds,12,Easy,2013
+3,Edible,Asteraceae,Lettuce,Garrison Red Oak,,Annapolis Seeds,9,Easy,2013
+4,Edible,Asteraceae,Lettuce,Italian Red Paella,,Anapolis Seeds,10,Easy,2013
+5,Edible,Asteraceae,Lettuce,Jericho Romaine,,Hope Seeds,10,Easy,2013
+6,Edible,Asteraceae,Lettuce,Mervilles de Quatre Saisons,,Hope Seeds,10,Easy,2013
+7,Edible,Fabaceae,Bean,Blue Jay,,Annapolis,8,Easy,2013
+10,Edible,Fabaceae,Bean,Blue Lake,,Incredible Seeds,6,Easy,2013
+11,Edible,Fabaceae,Bean,Black Valentine,,Hope Seeds,10,Easy,2013
+12,Edible,Fabaceae,Bean,Beure de Rocquencourt,,Hope Seeds,10,Easy,2013
+13,Edible,Fabaceae,Bean,Cherokee Way,,Incredible Seeds,4,Easy,2013
+14,Edible,Fabaceae,Bean,Lazy Housewife,,Annapolis Seeds,6,Easy,2013
+15,Edible,Fabaceae,Bean,Painted Lady Runner,,Incredible Seeds,6,Easy,2013
+16,Edible,Fabaceae,Bean,Purple Peacock,,Incredible Seeds,10,Easy,2013
+17,Edible,Fabaceae,Pea,Early Alaska,,Incredible Seeds,19,Easy,2013
+18,Edible,Fabaceae,Pea,Green Arrow,,Hope Seeds,27,Easy,2013
+19,Edible,Fabaceae,Pea,Lancashire Lad,,Annapolis Seeds,8,Easy,2013
+20,Edible,Fabaceae,Pea,Mammoth Melting Snow,,Incredible Seeds,16,Easy,2013
+21,Edible,Fabaceae,Pea,Sugar Ann,,Hope Seeds,10,Easy,2013
+22,Edible,Solanaceae,Tomato,Absinthe,,Incredible Seeds,6,Easy,2013
+23,Edible,Solanaceae,Tomato,Bali,,Annapolis Seeds,4,Easy,2013
+24,Edible,Solanaceae,Tomato,Big Rainbow,,Annapolis Seeds,6,Easy,2013
+25,Edible,Solanaceae,Tomato,Black Krim,,Incredible Seeds,6,Easy,2013
+26,Edible,Solanaceae,Tomato,Cherokee Purple Beefsteak,,Hope Seeds,4,Easy,2013
+27,Edible,Solanaceae,Tomato,Chiapis Wild,,Annapolis Seeds,6,Easy,2013
+28,Edible,Solanaceae,Tomato,Chocolate Cherry,,Incredible Seeds,6,Easy,2013
+29,Edible,Solanaceae,Tomato,Cole,,Annapolis Seeds,4,Easy,2013
+30,Edible,Solanaceae,Tomato,Crnovik Yugoslavian,,Annapolis Seeds,6,Easy,2013
+31,Edible,Solanaceae,Tomato,Gardener's Sweetheart Cherry,,Annapolis Seeds,5,Easy,2013
+32,Edible,Solanaceae,Tomato,Mortgage Lifter,,Annapolis Seeds,6,Easy,2013
+33,Edible,Solanaceae,Tomato,OSU Blue,,Incredible Seeds,6,Easy,2013
+34,Edible,Solanaceae,Tomato,Reisetomato,,Hope Seeds,8,Easy,2013
+35,Edible,Solanaceae,Tomato,San Marzano,,Incredible Seeds,5,Easy,2013
+36,Edible,Solanaceae,Tomato,Tigerella,,Hope Seeds,4,Easy,2013
+37,Edible,Apiaceae,Carrot,Dragon,,Incredible Seeds,26,Intermediate,2013
+38,Edible,Apiaceae,Carrot,Little Finger,,Incredible Seeds,14,Intermediate,2013
+39,Edible,Apiaceae,Carrot,Scarlet Nantes,,Incredible Seeds,13,Intermediate,2013
+40,Edible,Solanaceae,Peppers-Hot,Blugarian Carrot,,Incredible Seeds,2,Intermediate,2013
+41,Edible,Solanaceae,Peppers-Hot,Early Jalapeno,,Annapolis Seeds,5,Intermediate,2013
+42,Edible,Solanaceae,Peppers-Hot,Habenaro,,Incredible Seeds,3,Intermediate,2013
+43,Edible,Solanaceae,Peppers-Hot,Ring' O Fire,,Hope Seeds,3,Intermediate,2013
+44,Edible,Solanaceae,Peppers-Sweet,King of the North,,Hope Seeds,7,Intermediate,2013
+45,Edible,Solanaceae,Peppers-Sweet,Purple Beauty Bell,,Incredible Seeds,5,Intermediate,2013
+46,Edible,Solanaceae,Peppers-Sweet,Sweet Apple,,Annapolis Seeds,2,Intermediate,2013
+47,Edible,Solanaceae,Peppers-Sweet,Sweet Chocolate,,Annapolis Seeds,5,Intermediate,2013
+48,Edible,Solanaceae,Peppers-Sweet,Yankee Bell,,Annapolis Seed,8,Intermediate,2013
+49,Edible,Solanaceae,Tomatillo,Cossack Pineapple Ground Cherry,,Annapolis Seed,5,Intermediate,2013
+50,Edible,Solanaceae,Tomatillo,Green,,Annapolis Seed,5,Intermediate,2013
+51,Edible,Solanaceae,Tomatillo,Purple,,Incredible Seeds,9,Intermediate,2013
+52,Edible,Cucurbitaceae,Pumpkin,Cinderella,,Incredible Seeds,8,Master,2013
+53,Edible,Cucurbitaceae,Pumpkin,Fairytale,,Incredible Seeds,8,Master,2013
+54,Edible,Cucurbitaceae,Pumpkin,Jack Be Little,,Incredible Seeds,8,Master,2013
+55,Herb,Apiaceae,Cilantro/Coriander,Santo,,Hope Seeds,10,Intermediate,2013
+56,Herb,Apiaceae,Dill,Bouquet,,Hope Seeds,16,Intermediate,2013
+57,Herb,Apiaceae,Parsley,Moss Curled,,Hope Seeds,13,Intermediate,2013
+58,Herb,Asteraceae,Chamomile,German,,Hope Seeds,6,Intermediate,2013
+59,Herb,Asteraceae,Feverfew,,,Kelli Hawley,20,Intermediate,2013
+60,Herb,Lamiaceae,Hyssop,Ansie,,Annapolis Seeds,8,Intermediate,2013
+61,Herb,Lamiaceae,Basil,Cinnamon,,Hope Seeds,30,Intermediate,2013
+62,Herb,Lamiaceae,Basil,Dark Opal,,Hope Seeds,19,Intermediate,2013
+63,Herb,Lamiaceae,Basil,Genovese,,Hope Seeds,15,Intermediate,2013
+64,Herb,Lamiaceae,Basil,Lemon,,Incredible Seeds,8,Intermediate,2013
+65,Herb,Lamiaceae,Basil,Tulsi (Holy),,Incredible Seeds,12,Intermediate,2013
+66,Herb,Lamiaceae,Catnip,,,Annapolis Seeds,6,Intermediate,2013
+67,Herb,Lamiaceae,Motherwort,,,Annapolis Seeds,6,Intermediate,2013
+68,Herb,Lamiaceae,Sage,Purple,,Kelli Hawley,10,Intermediate,2013
+69,Herb,Lamiaceae,Savory,Summer,,Hope Seeds,20,Intermediate,2013
+70,Herb,Lamiaceae,Thyme,Winter,,Incredible Seeds,12,Intermediate,2013
+71,Ornamental,Amaranthaceae,Amaranth,Love Lies Bleeding,,Hope Seeds,10,Intermediate,2013
+72,Ornamental,Apocynaceae,Milkweed,,,Lyn McBryan,10,Intermediate,2013
+73,Ornamental,Asteraceae,Cornflower,Bachelor's Buttons,,Hope Seeds,10,Intermediate,2013
+74,Ornamental,Asteraceae,Brown-Eyed Susans,,,Kelli Hawley,20,Intermediate,2013
+75,Ornamental,Asteraceae,Calendula,Flashback,,Hope Seeds,10,Intermediate,2013
+76,Ornamental,Asteraceae,Calendula,Grandmothers,,Hope Seeds,8,Intermediate,2013
+77,Ornamental,Asteraceae,Marigold,Crackerjack,,Incredible Seeds,10,Intermediate,2013
+78,Ornamental,Asteraceae,Sunflower,Akira,,Annapolis Seeds,12,Intermediate,2013
+79,Ornamental,Asteraceae,Sunflower,Italian White,,Hope Seeds,10,Intermediate,2013
+80,Ornamental,Asteraceae,Sunflower,Mammoth Russian,,Annapolis Seeds,8,Intermediate,2013
+81,Ornamental,Campanulaceae,Bell Flower,White,,Kelli Hawley,10,Intermediate,2013
+82,Ornamental,Caryophyllaceae,Rose Campion,Deep Blush,,Kelli Hawley,20,Intermediate,2013
+83,Ornamental,Caryophyllaceae,Rose Campion,Hot Pink,,Kelli Hawley,21,Intermediate,2013
+84,Ornamental,Fabaceae,Lupin,Wild,,Incredible Seeds,10,Intermediate,2013
+85,Ornamental,Malvales,Hollyhock,Pink,,Verna Mingo,20,Intermediate,2013
+86,Ornamental,Papaveraceae,Poppy,Danish Flag,,Hope Seeds,21,Intermediate,2013
+87,Ornamental,Papaveraceae,Poppy,Pretty in Pink,,Hope Seeds,12,Intermediate,2013
+88,Ornamental,Papaveraceae,Poppy,Red,,Verna Mingo,11,Intermediate,2013
+89,Ornamental,Solanaceae,Tobacco,1000 Year Old,,Annapolis Seeds,9,Intermediate,2013

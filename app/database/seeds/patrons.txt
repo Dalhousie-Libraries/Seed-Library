@@ -1,0 +1,56 @@
+S0000001,Gray, David,1,david.gray@dal.ca,120 Lexington Dr,Valley,NS,,902-895-8058,,902-956-1585,0,1,Some,None,3/24/2014 0:00:00
+S0000002,Miller, Sherree,1,sherree.miller@dal.ca,5601 Highway 289,Upper Stewiacke,NS,B0N 2P0,902-671-2725,902-893-4576,,0,0,Some,Some,3/14/2014 0:00:00
+S0000003,Reid, Jolene,1,jolene.reid@dal.ca,77 Hillcrest Ave,Bible Hill,NS,B2N 4L2,902-843-2097,902-893-4578,,0,1,Some,Some,3/13/2014 0:00:00
+S0000004,Benvie, Shelley,1,shelleybenvie@eastlink.ca,147 Oakland Dr,Truro Heights,NS,B6L 1N3,902-895-1078,902-895-1444,902-956-2374,0,0,Some,None,3/17/2014 0:00:00
+S0000005,Currie, Stacy,1,s.mingo@hotmail.com,29 Tower View Road,Enfield,NS,B2T 1H1,902-259-2041,,,0,1,Some,None,3/17/2014 0:00:00
+S0000006,McBryan, Lyn,1,lynmcb@hotmail.com,28 Maple Ave,Tatamagouche,NS,B2N 1V0,902-657-2768,,,1,1,Lots,Lots,3/17/2014 0:00:00
+S0000007,Hawley, Kellie,1,khawley@dal.ca,38 Burnhope Dr,Montague Gold Mines,NS,,902-434-5059,902-494-3612,,1,0,Lots,Lots,3/17/2014 0:00:00
+S0000008,Wilson, Mandi,1,mkwilson@dal.ca,6 Beverly Ave,Truro,NS,B2N 4Y6,,902-893-6710,902-759-7001,0,0,None,None,3/17/2014 0:00:00
+S0000009,Thomson, Allan,1,allan.thomson@dal.ca,483 Highway 311,North River,NS,B6L 6H1,902-890-4249,,,0,1,Some,None,3/17/2014 0:00:00
+S0000010,Ryle-Gulliver, Ursula,1,wayurs@hotmail.com,331 East Mountain Rd,East Mountain,NS,B6L 2E3,902-843-6857,,,1,1,Lots,Some,3/17/2014 0:00:00
+S0000011,Moyles, Micheal,1,mmoyles@eastlink.ca,23 Burnyeat St,Truro,NS,B2N 4P9,902-893-7699,,,0,1,Some,Lots,3/17/2014 0:00:00
+S0000012,Gulliver, Wayne,1,wayurs@hotmail.com,331 East Mountain Rd,East Mountain,NS,B6L 2E3,902-843-6857,,,1,1,Lots,Some,3/17/2014 0:00:00
+S0000013,Wei, Dora,1,weiq@nsac.ca,PO Box 65 RPO Prince St,Truro,NS,,902-890-8384,,,1,0,Some,Some,3/17/2014 0:00:00
+S0000014,Latimer, Robert S,1,boblatimer@ns.sympatico.ca,22 Wellington Ct,Truro,NS,,902-893-5438,,,0,0,Some,Some,3/17/2014 0:00:00
+S0000015,Reid, Mary,1,hi_mreid@yahoo.ca,27 Harding's Hill,Portugal Cove,NF,,709-237-3581,,,0,0,Some,None,3/17/2014 0:00:00
+S0000016,Miller, Cindy,1,cindy.miller@dal.ca,8 Acorn Ave,Lantz,NS,,902-883-8238,902-494-2469,,0,1,Some,Some,3/17/2014 0:00:00
+S0000017,Cotterill, Dick,1,dick_cotterill@hotmail.com,17 Eastmor Dr,Bible Hill,NS,,902-893-4588,902-897-0699,902-305-8758,0,1,Some,Some,3/17/2014 0:00:00
+S0000018,Kusch, Alex,1,th878091@dal.ca,446 Alpena Rd RR#2,Lawrencetown,NS,,,902-825-8280,,0,1,Some,Some,3/17/2014 0:00:00
+S0000019,Rogers, AnnaLee,1,annalee.r@hotmail.com,182 Brookside Rd,Bible Hill,NS,B6L 2A9,902-843-2015,,,0,1,Lots,Lots,3/17/2014 0:00:00
+S0000020,Pentz, Jared,1,jaredcpentz@hotmail.com,182 Brookside Rd,Bible Hill,NS,B6L 2A9,902-843-2015,,902-956-4034,0,1,Lots,Lots,3/17/2014 0:00:00
+S0000021,Cox, Pat,1,garyandpat@eastlink.ca,19 Charles Court,Bible Hill,NS,B2N 2R5,902-893-3842,,,0,0,Some,None,3/17/2014 0:00:00
+S0000022,Campbell, Rhoda,1,rccampbell@eastlink.ca,41 Normandy Ave,Truro,NS,,902-897-1236,,,0,0,Some,Some,3/17/2014 0:00:00
+S0000023,MacKay, Marlo,1,marlo.mackay@dal.ca,5539 Inglis St Apt 2,Halifax,NS,B3H 1J9,902-412-6321,902-494-3907,,0,0,None,None,3/17/2014 0:00:00
+S0000024,Gulliver, Harry,1,hgulliver56@hotmail.com,26 Windsor Ave,Bible Hill,NS,,902-986-2625,,,0,1,Some,Lots,3/17/2014 0:00:00
+S0000025,Roberts, Cory,1,cjroberts@dal.ca,114 East Mountain Rd,Debert,NS,B0M 1G0,902-691-2171,902-890-0559,,1,1,Some,Some,3/17/2014 0:00:00
+S0000026,MacDonald, Daniel,1,tdmacdonald@nstu.ca,18 Hampton Ct,Fall River,NS,B2T 1E7,902-401-4706,,,1,0,Some,None,3/17/2014 0:00:00
+S0000027,Morton, Jeff,1,jeff.morton@dal.ca,16 Vimy Road,Bible Hill,NS,,,902-893-2690,902-986-4678,0,1,Some,Some,3/17/2014 0:00:00
+S0000028,Auld-Cameron, Jennifer,1,jennifer.auld.camerson@nscc.ca,29 Hampstead Ct,,NS,,902-893-1688,902-896-7106,,0,1,Some,Some,3/17/2014 0:00:00
+S0000029,Winchcombe, Erin,1,erin.winchcombe@dal.ca,1691 Highway 236,Clarksville,NS,B0N 2G0,902-632-2410,902-893-4583,,0,0,Lots,None,3/17/2014 0:00:00
+S0000030,MacPherson, Erin,1,erin.macpherson@dal.ca,34 Hillcrest Ave,Bible Hill,NS,B2N 4L3,902-843-5615,902-893-3296,,0,0,Some,Lots,3/18/2014 0:00:00
+S0000031,Netzke, Megan,1,megan.netzkee@live.com,120 Wood St,Truro,NS,B2N 4T5,902-305-1445,,,0,1,Some,Some,3/18/2014 0:00:00
+S0000032,Peach, Stephanie,1,st496378@dal.ca,1970 Highway 224,Shubenacadie,NS,B0N 2H0,902-430-7515,,,1,1,Lots,Lots,3/19/2014 0:00:00
+S0000033,Debay, Stacey,1,stacey.debay@hotmail.com,17 MacIntosh Ave,Truro,NS,B2N 4L5,902-893-8407,902-895-9999,902-897-5177,0,0,Some,None,3/18/2014 0:00:00
+S0000034,Lu, Qiming,1,luq@dal.ca,20 Horseshoe Cresent Chapman House,Bible Hill,NS,B2N 5E3,,,902-956-3372,0,1,Some,Some,3/18/2014 0:00:00
+S0000035,Tyne, Jessica,1,js783646@dal.ca,13 Glencoe Dr,,NS,,902-434-4301,,902-242-0609,0,0,Some,Some,3/18/2014 0:00:00
+S0000036,Morash, Morgan,1,mr742721@dal.ca,12 Riverview Dr,Timberlea,NS,B3T 1C9,902-876-2985,,,0,0,Some,None,3/18/2014 0:00:00
+S0000037,Qian, Huifang,1,qianh@dal.ca,9-297 College Road,Truro,NS,,902-957-0889,,,0,1,None,None,3/19/2014 0:00:00
+S0000038,Lloy, Ella,1,le.lloy@seasidehighspeed.com,RR#1,Collingwood,NS,B0M 1E0,902-686-3774,,,1,0,Lots,Some,3/19/2014 0:00:00
+S0000039,Wilson, Raebeka,1,rae_98@hotmail.com,13288 Highway 224,Chaswood,NS,,902-499-5235,,,0,0,Lots,Some,3/19/2014 0:00:00
+S0000040,Wilson, Tammie,1,tm438001@dal.ca,1884 Highway 2,Milford,NS,,,,902-305-4450,0,0,Lots,Some,3/19/2014 0:00:00
+S0000041,Zhang, Linshan,1,ln810418@dal.ca,30 Horseshoe Cr,Bible Hill,NS,B2N 5E3,902-977-0193,,,0,1,Some,None,3/20/2014 0:00:00
+S0000042,Sibley, Daphne,1,daphnesibley@hotmail.com,47 Highway 336,Upper Musquodoboit,NS,,902-568-2268,,,0,0,Some,Some,3/21/2014 0:00:00
+S0000043,Vail, Margaret,1,margaret@dal.ca,64 Roy Cres,Bedford,NS,B4A 3T2,,902-494-7747,902-292-9676,0,0,None,None,3/21/2014 0:00:00
+S0000044,Comeau, Marc,1,marc.comeau@dal.ca,101 Lewis Dr,Bedford,NS,,902-452-6520,902-494-6686,,0,0,Some,None,3/21/2014 0:00:00
+S0000045,Currie, Lida,1,lidacurrie@hotmail.com,8730 Highway 209 (PO Box 28),Port Greville,NS,B0M 1T0,902-348-2111,,,1,0,Lots,Some,3/22/2014 0:00:00
+S0000046,Stewart, Rick,1,richardwstewart@hotmail.com,17 MacIntosh Ave,,NS,,902-893-8407,,902-890-3047,0,0,Lots,Some,3/23/2014 0:00:00
+S0000047,Tobin-Huxley, Gillian,1,gillianth@hotmail.com,79 King St Apt 1,Truro,NS,,,,902-412-6871,0,0,Some,None,3/25/2014 0:00:00
+S0000048,Webb, Cody,1,c.webb@hotmail.com,22 Bridgeview Dr,Murray Siding,NS,,,,902-957-3400,0,0,Some,None,3/25/2014 0:00:00
+S0000049,MacInnis, Elaine,1,elaine.macinnis@dal.ca,30 Corey Dr,Truro,NS,B2N 6G7,902-896-4027,902-893-6670,902-956-2708,0,0,Some,None,3/25/2014 0:00:00
+S0000050,Jollimore, Tyler David,1,ty675936@dal.ca,825 Ketch Harbour Road,Halifax,NS,,902-868-2844,,902-880-8207,1,0,Lots,Some,3/25/2014 0:00:00
+S0000051,Marsh, Kayla,1,kayla_016@hotmail.com,26 Rue Sheppard,,,,418-956-4746,,,0,1,Some,None,3/31/2014 0:00:00
+S0000052,Oatway, Mary,1,moatway@hotmail.com,22 Doyle St,Truro,NS,,902-843-5519,,,0,0,Lots,Some,4/3/2014 0:00:00
+S0000053,McGuire, Graham,1,mcguire.graham@gmail.com,351 St George Blvd,Hammonds Plains,NS,B4B 1S4,902-403-7420,902-407-8949,902-414-5590,0,0,Some,Some,4/5/2014 0:00:00
+S0000054,Delmage, Kate,1,katedelmage@gmail.com,249 Economy Point Road,Economy,NS,B0M 1J0,902-647-2327,,,0,0,Some,None,4/7/2014 0:00:00
+S0000055,Turner, Linda,0,turnerlinda21@gmail.com,46-1 Duke St,Truro,NS,,902-895-9007,,902-977-1966,0,0,None,None,4/8/2014 0:00:00
+S0000056,Allan, Carey,1,careyee@hotmail.com,1641 Concord Rd RR#2,Westville,NS,,902-396-1526,,902-396-3915,0,0,Lots,Some,3/28/2014 0:00:00

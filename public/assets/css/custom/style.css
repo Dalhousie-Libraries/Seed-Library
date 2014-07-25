@@ -1,0 +1,48 @@
+/* Header customization
+---------------------------------------------------*/
+.navbar-menu {
+    /*background-image: none;
+    background-color: black;*/
+    padding: 10px;
+}
+
+.navbar-menu a,
+.navbar-menu a:hover,
+.navbar-menu a:focus {
+    /*background-image: linear-gradient(to bottom,#52a752 0,#387a58 100%);
+    background-color: #276947;
+    color: #d3d3d3;*/
+}
+
+.nav_link {
+	color: #ffffff;
+}
+
+/* Rounded divs
+-------------------------------------------------- */
+.rounded {
+    border-radius: 15px 15px 15px 15px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    
+}
+footer {
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /* Set the fixed values of the footer here and center it */
+    /*width: 1140px;
+    left: 50%;
+    margin-left: -570px;*/
+    margin: 0 auto;
+}
+
+/* Border colors
+-------------------------------------------------- */
+.lt_green_border {border: 1px solid #CEE8C4;}
