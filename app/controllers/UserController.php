@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Controller responsible for all front-end features related to the 'users' table.
- * 
- * Generates front-end content, including 'sign up', 'my profile' and 
- * 'my requests'.
- */
 class UserController extends BaseController {
 
 	/**
@@ -16,8 +10,6 @@ class UserController extends BaseController {
 
         /**
          * Inject the models.
-         * (the controller is always instatiated by the framework, so there's no 
-         * need to call it in most situations)
          * @param User $user
          */
         public function __construct(User $user)
@@ -26,9 +18,7 @@ class UserController extends BaseController {
         }
     
         /**
-	* Display logged in user's profile page.
-        * 
-        * @return Response
+	*   Display user's profile page.
 	*/
         public function getIndex()
         {
@@ -44,7 +34,7 @@ class UserController extends BaseController {
         }
         
         /**
-	 * Show the form for registering a new user (sign up form).
+	 * Show the form for registering a new user.
 	 *
 	 * @return Response
 	 */
@@ -61,9 +51,7 @@ class UserController extends BaseController {
 	}
         
         /**
-	 * Store a newly registered user into the database (sign up form post).
-         * Redirect to the login page in case of success. Otherwise, goes back
-         * to the sign up form, displaying the errors that occurred.
+	 * Store a newly registered user into the database.
 	 *
 	 * @return Response
 	 */
@@ -138,10 +126,7 @@ class UserController extends BaseController {
 	}
        
        /**
-        * Updates user record. Returns to the logged in user profile page and 
-        * shows a status message.
-        * 
-        * @return Response
+        * Updates user record.
         */
        public function postEdit()
        {
@@ -216,9 +201,7 @@ class UserController extends BaseController {
        }
         
         /**
-         *  Show all user's requests, including borrowings, donations and returns.
-         * 
-         * @return Response 
+         *  Show all user's requests.
          */
         public function getRequests()
         {
@@ -230,25 +213,18 @@ class UserController extends BaseController {
         }
         
         /**
-         *  Show the retrieve password form. It's used to give access to users
-         * that were registered by the administrators and do not know their
-         * passwords.
-         * 
-         * @return Response
+         *  Show the retrieve password form.
          */
         public function getPassword()
         {
             // Page title
             $title = 'Retrieve password';
             
-            return View::make('site/users/activate', compact('title'));
+            return View::make('site/users/password', compact('title'));
         }
         
         /**
-         *  Creates a new password and send it to user's email. Returns to the 
-         * original page in case of errors or to login page in case of success.
-         * 
-         * @return Response
+         *  Create a new password and send it to user's email.
          */
         public function postPassword()
         {
@@ -305,21 +281,41 @@ class UserController extends BaseController {
         }
         
         /**
-         * Activates a user account; afterwards, renders password form.
-         * @param String $token Activation token.
-         * 
-         * @todo Render change password form.
-         * @return Response
+         * Activates a user account; renders password form.
+         * @param type $token
          */
         public function activateAccount($token)
         {
-            // Try to find it on the database
-            $user = User::where('rememaber_token', '=', $token)->first();
-            
-            // Check whether token is valid or not
-            if (is_null($user))
-                return App::abort(404, 'Invalid token.');
-            
-            // Render change password form
+			// Declare the rules for the form validation
+            $rules = array(
+            # System                
+                'password'              => 'required|min:6|Confirmed',
+                'password_confirmation' => 'required|min:6',
+            );
+
+            // Validate the inputs
+            $validator = Validator::make(Input::all(), $rules);
+
+            // Check if the form validates with success
+            if ($validator->passes())
+            {
+                // Create the user's data
+                # System
+                $this->user->email           = Input::get('email');
+                $this->user->password        = Hash::make(Input::get('password'));
+                
+                // Was the user created?
+                if($this->user->save())
+                {                  
+                    // Redirect to the new user page (or activation page maybe?)
+                    return Redirect::to('login')->with('success', "Your password has been updated! Enter your login information to sign in.");
+                }
+
+                // Redirect to the user create page
+                return Redirect::to('signup')->withInput()->with('error', 'Something happened and we could not save data into the database');
+            }
+
+            // Form validation failed
+            return Redirect::to('signup')->withInput()->withErrors($validator);
         }
 }

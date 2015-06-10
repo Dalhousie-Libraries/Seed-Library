@@ -28,6 +28,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'admin'), function()
 {
     # Users (borrowers, donors, suppliers, returners)
     Route::get('users/{item}/edit', 'AdminUserController@getEdit');
+    Route::get('users/{item}/view', 'AdminUserController@getView');
     Route::post('users/{item}/edit', 'AdminUserController@postEdit');
     Route::get('users/{item}/delete', 'AdminUserController@delete');
     Route::any('users/delete', 'AdminUserController@deleteAll');
@@ -68,6 +69,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'admin'), function()
     Route::get('packets/lend', 'AdminPacketController@getSeedsList');
     Route::get('packets/{item}/lend', 'AdminPacketController@getLending');
     Route::post('packets/{item}/lend', 'AdminPacketController@postLending');
+	Route::get('packets/{item}/lend/undo', 'AdminPacketController@undoCheckout');
     Route::get('packets/{item}/history', 'AdminPacketController@showPacketHistory');
     Route::get('packets/{item}/delete', 'AdminPacketController@delete');
     Route::any('packets/delete', 'AdminPacketController@deleteAll');

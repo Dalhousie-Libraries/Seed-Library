@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Controller responsible for all front-end features related to the 'returns' table.
- *
- * Include CRUD for 'returns' table.
- */
 class ReturnController extends BaseController {
 
 	/**
@@ -15,9 +10,6 @@ class ReturnController extends BaseController {
 
         /**
          * Inject the models.
-         * (the controller is always instatiated by the framework, so there's no 
-         * need to call it in most situations)
-         * 
          * @param Returning $return
          */
         public function __construct(Returning $return)
@@ -26,9 +18,7 @@ class ReturnController extends BaseController {
         }
     
         /**
-	* Displays return's creation form.
-        * 
-        * @return Response
+	*   Display return's profile page.
 	*/
         public function getCreate()
         {
@@ -40,10 +30,7 @@ class ReturnController extends BaseController {
         }
         
         /**
-	* Saves a newly created return. Redirects to creation page and
-        * displays the results.
-        * 
-        * @return Response
+	*   Save a new return.
 	*/
         public function postCreate()
         {
@@ -104,10 +91,7 @@ class ReturnController extends BaseController {
         }
         
         /**
-	* Renders a return edit page.
-        *         
-        * @param int $id Return id
-        * @return Response
+	*   Display return's profile page.
 	*/
         public function getEdit($id)
         {
@@ -127,11 +111,7 @@ class ReturnController extends BaseController {
         }
         
         /**
-	* Updates an existing return. Redirects to return edit page, showing
-        * the results of the update.
-        * 
-        * @param int $id Return id.
-        * @return Response
+	*   Update an existing return record.
 	*/
         public function postEdit($id)
         {
@@ -198,8 +178,8 @@ class ReturnController extends BaseController {
         /**
         * Remove the specified resource from storage.
         *
-        * @param $id Return id.
-        * @return JSON
+        * @param $id
+        * @return Response
         */
        public function delete($id)
        {
@@ -236,9 +216,8 @@ class ReturnController extends BaseController {
        }
         
         /**
-         * Retrieves a specific return's data.
+         *  Retrive a specific return's data.
          * 
-         * @param int $id Return id.
          * @return JSON
          */
         public function getReturn($id)
@@ -247,20 +226,19 @@ class ReturnController extends BaseController {
         }
         
         /**
-        * Retrieves all returns.
-        * 
-        * @return JSON
-        */
+         *  Retrive all returns.
+         * 
+         * @return JSON
+         */
         public function getAll()
         {
             return Returning::all();
         }
         
         /**
-        * Cancel many return requests (post data). Allows only creator and
-        * administrators to delete a return request.
+        * Cancel many return requests.
         * 
-        * @return JSON
+        * @return Response
         */
        public function deleteAll()
        {

@@ -47,13 +47,21 @@ class Accession extends Eloquent {
     {
         // Assigns the current year - first part of the accession number (e.g. 2014)
         $currentYear = date('Y');
-        
-        // Gets the second part of the accession number
-        $result = DB::select( DB::raw('SELECT accession_number FROM `accessions` WHERE YEAR(checked_in_date) = :year ORDER BY id DESC LIMIT 1'), array(
-            'year' => $currentYear
-        ));
-        
+      
+		try{ 
+				// Gets the second part of the accession number
+				$result = DB::select( DB::raw('SELECT accession_number FROM `accessions` WHERE YEAR(checked_in_date) = :year ORDER BY id DESC LIMIT 1'), array(
+				   'year' => $currentYear
+			   ));
+
+			$accession_part = str_pad((explode('.', $result[0]->accession_number)[1]) + 1, 5, '0', STR_PAD_LEFT);	
+		}catch(Exception $e){
+			$accession_part = str_pad(1, 5, '0', STR_PAD_LEFT);
+		}
+	
+
         // Assigns the second part of the number
-        return $currentYear . '.' . str_pad((explode('.', $result[0]->accession_number)[1]) + 1, 5, '0', STR_PAD_LEFT);
+        return $currentYear . '.' . $accession_part;
+	
     }
 }

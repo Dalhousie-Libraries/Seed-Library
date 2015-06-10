@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Controller responsible for all back-end features related to the 'donations' table.
- *
- * Include CRUD for 'donations' table, with greater permissions than the front-end.
- */
 class AdminDonationController extends BaseController {
 
         /**
@@ -14,21 +9,16 @@ class AdminDonationController extends BaseController {
         protected $donation;
     
 	/**
-         * Inject the models.
-         * (the controller is always instatiated by the framework, so there's no 
-         * need to call it in most situations)
-         * 
-         * @param Donation $donation
-         */
-        public function __construct(Donation $donation)
-        {
-            $this->donation = $donation;
-        }
+        * Inject the models.
+        * @param Donation $donation
+        */
+       public function __construct(Donation $donation)
+       {
+           $this->donation = $donation;
+       }
     
         /**
-         * Display all the registered donations.
-         * 
-         * @return Response
+	*   Display all the registered donations.
 	*/
         public function getIndex()
         {
@@ -39,9 +29,9 @@ class AdminDonationController extends BaseController {
         }
         
         /**
-         * Lists all requests that have been made by users.
-         * 
-         * @return Response
+        * Lists all requests that have been made.
+        * 
+        * @return Response
         */
        public function getRequests()
        {
@@ -53,7 +43,7 @@ class AdminDonationController extends BaseController {
        }
         
         /**
-	 * Renders the form for creating a new donation.
+	 * Show the form for creating a new donation.
 	 *
 	 * @return Response
 	 */
@@ -137,10 +127,8 @@ class AdminDonationController extends BaseController {
 	}
         
         /**
-         * Renders update form for a specific donation.
-         * 
-         * @param int $id Donation id.
-         * @return Response
+        * Renders update form.
+        * @param int $id
         */
        public function getEdit($id)
        {
@@ -157,10 +145,8 @@ class AdminDonationController extends BaseController {
        }
        
        /**
-        * Updates donation record.
-        * 
-        * @param int $id Donation id.
-        * @return Response
+        * Updates user record.
+        * @param int $id
         */
        public function postEdit($id)
 	{
@@ -222,9 +208,8 @@ class AdminDonationController extends BaseController {
 	}
         
         /**
-	 * Renders form for checking in a donation.
+	 * Show the form for checking in a donation.
 	 *
-         * @param int $id Donation id.
 	 * @return Response
 	 */
         public function getCheckIn($id)
@@ -285,9 +270,9 @@ class AdminDonationController extends BaseController {
 	}
         
         /**
-         * Retrieves all completed donations records formatted for DataTables.
+         *  Retrieve all completed donations records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getDonatedPackets()
         {
@@ -313,9 +298,9 @@ class AdminDonationController extends BaseController {
         }
         
         /**
-         * Retrieve all requested donations records formatted for DataTables.
+         *  Retrieve all requested donations records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getRequestedPackets()
         {

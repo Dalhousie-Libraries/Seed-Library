@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Controller responsible for all back-end features related to the 'items' table.
- */
 class AdminItemController extends BaseController {
     
         /**
@@ -13,9 +10,6 @@ class AdminItemController extends BaseController {
 
         /**
          * Inject the models.
-         * (the controller is always instatiated by the framework, so there's no 
-         * need to call it in most situations)
-         * 
          * @param Item $item
          */
         public function __construct(Item $item)
@@ -24,7 +18,7 @@ class AdminItemController extends BaseController {
         }
 
 	/**
-	* Lists all the registered items.
+	*   Display all the registered items.
 	*/
         public function getIndex()
         {
@@ -35,7 +29,7 @@ class AdminItemController extends BaseController {
         }
         
         /**
-	 * Renders form for creating a new item.
+	 * Show the form for creating a new item.
 	 *
 	 * @return Response
 	 */
@@ -49,7 +43,7 @@ class AdminItemController extends BaseController {
 	}
 
 	/**
-	 * Stores a newly created item into the database.
+	 * Store a newly created item into the database.
 	 *
 	 * @return Response
 	 */
@@ -133,10 +127,8 @@ class AdminItemController extends BaseController {
 	}
         
         /**
-         * Renders item update form.
-         * 
-         * @param int $id Item id.
-         * @return Response
+        * Renders update form.
+        * @param int $id
         */
        public function getEdit($id)
        {
@@ -154,9 +146,7 @@ class AdminItemController extends BaseController {
 
        /**
         * Updates item record.
-        * 
-        * @param int $id Item id.
-        * @return Response
+        * @param int $id
         */
        public function postEdit($id)
        {
@@ -241,10 +231,10 @@ class AdminItemController extends BaseController {
        }
        
        /**
-        * Removes the specified resource from storage.
+        * Remove the specified resource from storage.
         *
-        * @param int $id Item id.
-        * @return JSON
+        * @param $id
+        * @return Response
         */
        public function delete($id)
        {
@@ -273,9 +263,9 @@ class AdminItemController extends BaseController {
        }
        
        /**
-        * Removes all specified resources from storage.
+        * Remove all specified resources from storage.
         * 
-        * @return JSON
+        * @return Response
         */
        public function deleteAll()
        {
@@ -317,9 +307,9 @@ class AdminItemController extends BaseController {
        }
        
         /**
-         * Retrieves all items records formatted for DataTables.
+         *  Retrieve all items records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getData()
         {

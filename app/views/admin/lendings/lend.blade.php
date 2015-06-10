@@ -55,6 +55,15 @@
         </div>
         <!-- ./ borrower -->
 
+		<!-- Date -->
+        <div class="form-group {{{ $errors->has('date') ? 'has-error' : '' }}}">
+            <div class="col-md-12">
+				<label class="control-label" for="borrow_date">Borrow Date</label>
+                <input class="form-control span2" type="text" name="borrow_date" id="borrow_date" value="{{Carbon::now()->format('Y-m-d');}}" />
+            </div>
+        </div>
+        <!-- ./ date -->
+		
         <!-- Form Actions -->
         <div class="form-group">
             <div class="controls">
@@ -81,5 +90,18 @@
     $('#btn_lend').click(function(event) {
         $.removeCookie('packets', { path: '/' });
     });
+	
+	
+	// Date Picker js
+	if (top.location != location) {
+    top.location.href = document.location.href ;
+  }
+		$(function(){
+			window.prettyPrint && prettyPrint();
+			$('#borrow_date').datepicker({
+				format: 'yyyy-mm-dd'
+			});
+		});
+		// END Date Picker js	
 </script>
 @stop

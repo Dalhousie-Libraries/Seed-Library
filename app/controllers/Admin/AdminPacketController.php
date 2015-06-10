@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Controller responsible for all back-end features related to the 'donations' table.
- *
- * Include CRUD for 'packets' table, with greater permissions than the front-end.
- */
 class AdminPacketController extends BaseController {
 
         /**
@@ -14,12 +9,9 @@ class AdminPacketController extends BaseController {
         protected $packet;
     
 	/**
-         * Inject the models.
-         * (the controller is always instatiated by the framework, so there's no 
-         * need to call it in most situations)
-         * 
-         * @param Packet $packet
-         */
+        * Inject the models.
+        * @param Packet $packet
+        */
        public function __construct(Packet $packet)
        {
            $this->packet = $packet;
@@ -70,7 +62,6 @@ class AdminPacketController extends BaseController {
         /**
 	 * Store a newly registered packet into the database.
 	 *
-         * @param String $type Accession type.
 	 * @return Response
 	 */
 	public function postCreate($type)
@@ -120,11 +111,8 @@ class AdminPacketController extends BaseController {
 	}
         
         /**
-         * Updates a specific packet record.
-         * 
-         * @param int $id Packet id.
-         * @param String $type Accession type.
-         * @return Response
+        * Updates user record.
+        * @param int $id
         */
         public function postEdit($id, $type)
         {
@@ -175,9 +163,8 @@ class AdminPacketController extends BaseController {
 	}
         
         /**
-	 * Renders form for lending a packet.
+	 * Show the form for lending a packet.
 	 *
-         * @param int $id Packet id.
 	 * @return Response
 	 */
         public function getLending($id)
@@ -194,7 +181,7 @@ class AdminPacketController extends BaseController {
         }
         
         /**
-	 * Stores a newly registered lending into the database.
+	 * Store a newly registered lending into the database.
 	 *
 	 * @return Response
 	 */
@@ -203,6 +190,7 @@ class AdminPacketController extends BaseController {
             // Declare the rules for the form validation
             $rules = array(
                 'borrower'  => 'required|min:3',
+				'borrow_date'  => 'required|date|date_format:"Y-m-d"|before:"now"',
             );
             
             // Validate the inputs
@@ -227,7 +215,7 @@ class AdminPacketController extends BaseController {
                 
                 // Update packet data
                 $packet->borrower_id      = $borrower->id;
-                $packet->checked_out_date = Carbon::now();
+                $packet->checked_out_date = new Carbon(Input::get('borrow_date'));
 
                 // Was the packet updated?
                 if($packet->save())
@@ -243,24 +231,58 @@ class AdminPacketController extends BaseController {
             // Form validation failed
             return Redirect::to('admin/packets/' . Input::get('id') . '/lend')->withInput()->withErrors($validator);
 	}
-        
+
+	public function undoCheckout($id)
+	{
+		// Response message
+		$response = array();
+		$response['success'] = true;
+		$response['message'] = 'OK';
+		
+		// Find packet in the database
+		$packet = Packet::find($id);
+	   
+		// Check if donation exists
+		if (is_null($packet)) {
+			$response['success'] = false;
+			$response['message'] = 'Packet does not exist';
+		} else {
+			
+			$packet->borrower_id      = null;
+            $packet->checked_out_date = null;
+			
+			// Save changes
+			if (!$packet->save()) 
+			{
+				$response['success'] = false;
+				$response['message'] = 'An error ocurred and the request could not be canceled.';
+			}
+		}
+	   
+		return $response;
+	}
+	
         /**
-         * Retrieves all packets records formatted for DataTables.
+         *  Retrieve all packets records formatted for DataTables.
          * 
-         * @param String $keyword Search terms.
-         * @return JSON\Datatables
-         */        
+         * @return Datatables JSON
+         */
+        // LISTING ONLY AVAILABLE PACKETS!!!
         public function getListByName($keyword = false)
-        {            
-            // Query the database - LISTING ONLY AVAILABLE PACKETS!!!
+        {   
+            // Workaround to make 'orWhere' work
+            global $parameter;
+            $parameter = $keyword;
+            
+            // Query the database
             $packets = Packet::select(array('packets.id', 'items.family', 'packets.amount', 'packets.germination_ratio', 'packets.date_harvest', 'packets.grow_location', 'items.species', 'items.variety'))
                              ->join('accessions', 'accessions.id', '=', 'packets.accession_id')
                              ->join('items', 'items.id', '=', 'accessions.item_id')
                              ->whereNull('borrower_id')
-                             ->where(function($query) use ($keyword)
+                             ->where(function($query)
                              {
                                 // Change query according to entered search
-                                $params = explode('-', $keyword);
+                                $params = explode('-', $GLOBALS['parameter']);
                                 
                                 // Remove white spaces
                                 foreach($params as &$param)
@@ -278,9 +300,9 @@ class AdminPacketController extends BaseController {
                                           ->where('items.variety', 'LIKE', "%".$params[2]."%");
                                 } else 
                                 {   // Search was only a keyword                                 
-                                    $query->where('items.family', 'LIKE', "%".$keyword."%")
-                                          ->orWhere('items.species', 'LIKE', "%".$keyword."%")
-                                          ->orWhere('items.variety', 'LIKE', "%".$keyword."%");
+                                    $query->where('items.family', 'LIKE', "%".$GLOBALS['parameter']."%")
+                                          ->orWhere('items.species', 'LIKE', "%".$GLOBALS['parameter']."%")
+                                          ->orWhere('items.variety', 'LIKE', "%".$GLOBALS['parameter']."%");
                                 }
                              });
 
@@ -300,9 +322,9 @@ class AdminPacketController extends BaseController {
         }
         
          /**
-         * Retrieves all lending records formatted for DataTables.
+         *  Retrieve all lending records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getLentPackets()
         {
@@ -312,13 +334,16 @@ class AdminPacketController extends BaseController {
                              ->join('items', 'items.id', '=', 'accessions.item_id')
                              ->join('users', 'users.id', '=', 'packets.borrower_id')
                              ->whereNotNull('checked_out_date')
-                             ->whereNotNull('borrower_id');
+                             ->whereNotNull('borrower_id')
+							 ->whereNotIn('packets.id', function($query){
+									$query->from('accessions')->select('parent_id')->whereNotNull('parent_id');
+								});
 
             return Datatables::of($packets)
 
             ->edit_column('family', '{{ $family }} > {{ $species }} > {{ $variety }}')
-                    
-            //->add_column('packets.id', '<a href="{{{ URL::to(\'admin/packets/\' . $id . \'/lend\' ) }}}" class="btn btn-default btn-xs iframe" >Lend</a>')
+            
+			->add_column('actions', '<a href="#" class="btn btn-danger btn-xs delete" data-toggle="modal" data-target="#confirmDelete" data-link="{{{ URL::to(\'admin/packets/\' . $id . \'/lend/undo\') }}}" data-title="Undo Packet Checkout" data-message="Are you sure you want to undo the checkout of this packet?">Undo Checkout</a>')
 
             ->remove_column('species')
             ->remove_column('variety')
@@ -327,10 +352,10 @@ class AdminPacketController extends BaseController {
             ->make();
         }
         
-        /**
-         * Retrieve all requests records formatted for DataTables.
+         /**
+         *  Retrieve all requests records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getRequestedPackets()
         {
@@ -360,10 +385,7 @@ class AdminPacketController extends BaseController {
         }
         
         /**
-         * Displays the history of a specific packet.
-         * 
-         * @param int $id Packet id.
-         * @return Response
+         *  Display the history of a specific packet.
          */
         public function showPacketHistory($id)
         {
@@ -380,9 +402,9 @@ class AdminPacketController extends BaseController {
         }
         
         /**
-        * Cancel a packet request.
+        * Cancel packet request.
         *
-        * @param int $id Packet id.
+        * @param $id
         * @return Response
         */
        public function delete($id)
@@ -412,7 +434,7 @@ class AdminPacketController extends BaseController {
        }
        
        /**
-        * Removes all specified resources from storage.
+        * Remove all specified resources from storage.
         * 
         * @return Response
         */

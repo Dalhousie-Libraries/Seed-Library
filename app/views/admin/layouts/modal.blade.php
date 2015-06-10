@@ -42,13 +42,14 @@
 
 	<!-- CSS -->
     <!--<link rel="stylesheet" href="{{asset('http://netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css')}}">-->
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/wysihtml5/bootstrap-wysihtml5.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/datatables-bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/colorbox.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/typeahead-custom.css')}}">
-   <link rel="stylesheet" href="{{asset('assets/css/custom/style.css')}}">
-    
+    <link rel="stylesheet" href="{{asset('assets/css/custom/style.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/datepicker.css')}}">
+	
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
@@ -99,6 +100,7 @@
     <script src="{{asset('assets/js/jquery.cookie.js')}}"></script>
     <script src="{{asset('assets/js/prettify.js')}}"></script>
     <script src="{{asset('assets/js/typeahead.min.js')}}"></script>
+	<script src="{{asset('assets/js/bootstrap-datepicker.js')}}"></script>
     <script src="{{asset('assets/js/custom/util.js')}}"></script>
     <script type="text/javascript">
         $(document).ready(function(){

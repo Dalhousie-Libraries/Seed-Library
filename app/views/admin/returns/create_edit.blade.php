@@ -68,6 +68,15 @@
                         </div>
                     </div>
                     <!-- ./ returner -->
+
+					<!-- Date -->
+					<div class="form-group {{{ $errors->has('date') ? 'has-error' : '' }}}">
+						<div class="col-md-12">
+							<label class="control-label" for="return_date">Return Date</label>
+							<input class="form-control span2" type="text" name="return_date" id="return_date" value="{{Carbon::now()->format('Y-m-d');}}" />
+						</div>
+					</div>
+					<!-- ./ date -->					
                     
                     <div class="form-group {{{ $errors->has('amount') ? 'has-error' : '' }}}">
                         <div class='col-md-12'>
@@ -357,5 +366,17 @@
             $('#lbl_description').tooltip('hide');
         });
     });
+	
+	// Date Picker js
+	if (top.location != location) {
+    top.location.href = document.location.href ;
+  }
+		$(function(){
+			window.prettyPrint && prettyPrint();
+			$('#return_date').datepicker({
+				format: 'yyyy-mm-dd'
+			});
+		});
+		// END Date Picker js	
 </script>
 @stop

@@ -12,7 +12,7 @@
             <p>{{Session::get('success')}}</p>
         </div>
     @endif
-    
+
     <!-- Saving error -->
     @if ( Session::has('error') )
         <div class="alert alert-danger alert-block">
@@ -36,8 +36,9 @@
             <tr>
                 <th class="col-md-1">{{{ Lang::get('Packet #') }}}</th>
                 <th class="col-md-3">{{{ Lang::get('Seed') }}}</th>
-		<th class="col-md-2">{{{ Lang::get('Borrower') }}}</th>                
+		<th class="col-md-2">{{{ Lang::get('Borrower') }}}</th>
                 <th class="col-md-1">{{{ Lang::get('Checked out Date') }}}</th>
+                <th class="col-md-1">{{{ Lang::get('Actions') }}}</th>
             </tr>
         </thead>
 	<tbody>
@@ -46,6 +47,7 @@
 @stop
 
 @section('scripts')
+@include('admin/layouts/delete')
     <script type="text/javascript">
         var oTable;
         $(document).ready(function() {
@@ -59,7 +61,7 @@
                         "bServerSide": true,
                         "sAjaxSource": "{{ URL::to('admin/packets/data/lent') }}",
                         "fnDrawCallback": function ( oSettings ) {
-                            $(".iframe").colorbox({iframe:true, width:"80%", height:"80%", 
+                            $(".iframe").colorbox({iframe:true, width:"80%", height:"80%",
                                             onClosed: function() {
                                                 oTable.fnReloadAjax();
                                             },
@@ -67,5 +69,23 @@
                         }
                 });
         });
+		
+	// Delete button behaviour
+    $('#confirmDelete').find('.modal-footer #confirm').on('click', function(){
+        var link    = $(this).data('form');
+        var element = $(this).data('source');
+
+	    // Delete a single packet
+		// Try to delete packet via AJAX
+		$.get(link, function(data) {
+			// Analyse results
+			if (data.success)
+				oTable.fnReloadAjax();
+			else
+				alert(data.message);
+		}).fail(function() {
+			alert('Checkout could not be undone.'); // or whatever
+		});
+    });
     </script>
 @stop

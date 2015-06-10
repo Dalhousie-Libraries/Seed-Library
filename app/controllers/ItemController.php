@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Controller responsible for all front-end features related to the 'items' table.
- * 
- * Generates front-end content, including 'View details', 'search', 'basket' and
- * 'checkout'. Also includes methods that retrieve data in JSON format.
- */
 class ItemController extends BaseController {
 
 	/**
@@ -16,9 +10,6 @@ class ItemController extends BaseController {
 
         /**
          * Inject the models.
-         * (the controller is always instatiated by the framework, so there's no 
-         * need to call it in most situations)
-         * 
          * @param Item $item
          */
         public function __construct(Item $item)
@@ -27,10 +18,7 @@ class ItemController extends BaseController {
         }
     
         /**
-	 * Renders a specific item's page.
-         *
-         * @param int $id Item id.
-         * @return Response
+	*   Display item's profile page.
 	*/
         public function show($id)
         {
@@ -50,9 +38,7 @@ class ItemController extends BaseController {
         }
         
         /**
-         * Renders item search page.
-         * 
-         * @return Response
+         *  Display item search page.
          */
         public function search()
         {
@@ -63,7 +49,7 @@ class ItemController extends BaseController {
         }
         
         /**
-         * Retrieves a specific item's data.
+         *  Retrive a specific item's data.
          * 
          * @return JSON
          */
@@ -73,9 +59,9 @@ class ItemController extends BaseController {
         }
         
         /**
-         * Retrieves all items.
+         *  Retrive all items.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getAll()
         {
@@ -92,9 +78,9 @@ class ItemController extends BaseController {
         }
         
         /**
-         * Retrieve all available items (i.e. items that have packets).
+         *  Retrive all available items (i.e. items that have packets)
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getAllAvail()
         {
@@ -118,9 +104,7 @@ class ItemController extends BaseController {
         }
         
         /**
-	* Renders user's basket page.
-        * 
-        * @return Response
+	*   Display user's basket.
 	*/
         public function basket()
         {
@@ -132,9 +116,7 @@ class ItemController extends BaseController {
         }
         
         /**
-	* Renders checkout confirmation page.
-        * 
-        * @return Response
+	*   Display checkout page.
 	*/
         public function confirmCheckout()
         {
@@ -146,10 +128,9 @@ class ItemController extends BaseController {
         }
         
         /**
-	* Saves borrowing request. Returns operation status in JSON format.
-        * Gets input via POST data.
-        * 
-        * @return JSON
+	*   Display checkout page.
+         * 
+         * @return JSON
 	*/
         public function doCheckout()
         {
@@ -203,10 +184,8 @@ class ItemController extends BaseController {
         
         /**
          * Search an item by its full name (i.e. family, species and variety).
-         * Returns search results in JSON, formatted specifically to TYPEAHEAD
-         * plugin.
-         * 
-         * @param String $itemName Search terms.
+         *
+         * @param String $itemName
          * @return JSON
          */
         public function getItemByName($itemName) 

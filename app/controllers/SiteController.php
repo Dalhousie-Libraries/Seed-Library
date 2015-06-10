@@ -1,17 +1,11 @@
 <?php
 
-/**
- * Controller responsible for all features related to the CMS front-end.
- */
 class SiteController extends BaseController {
 
     /**
-     * Renders the website homepage.
+     * Show homepage.
      * 
      * @return Response
-     * 
-     * @todo Could be improved in a way that even the index page could be 
-     * created using the CMS.
      */
     public function index()
     {
@@ -22,11 +16,7 @@ class SiteController extends BaseController {
     }
     
     /**
-    *  Renders a specific article.
-    * 
-    * @param int/String $id If numeric, it's the article id. Otherwise, it's the
-    * article slug.
-    * @return Response
+    *  Show specified article.
     */
     public function show($id) 
     {
@@ -49,12 +39,6 @@ class SiteController extends BaseController {
 
     /**
      *  Search for an specific article.
-     * 
-     * @param String $keyword Search terms.
-     * @return JSON
-     * 
-     * @todo Create a view for search results (other method). This method will 
-     * return only JSON.
      */
     public function search($keyword)
     {

@@ -35,7 +35,7 @@
         <thead>
             <tr>
                 <th class="col-md-3">{{{ Lang::get('Seed') }}}</th>
-		<th class="col-md-2">{{{ Lang::get('Donor') }}}</th>
+				<th class="col-md-2">{{{ Lang::get('Donor') }}}</th>
                 <th class="col-md-1">{{{ Lang::get('Amount (grams)') }}}</th>
                 <th class="col-md-2">{{{ Lang::get('Checked in Date') }}}</th>
                 <th class="col-md-1">{{{ Lang::get('Actions') }}}</th>

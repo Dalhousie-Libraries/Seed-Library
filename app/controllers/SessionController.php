@@ -1,17 +1,9 @@
 <?php
 
-/**
- * Controller responsible for session management (login, logout).
- */
 class SessionController extends BaseController {
 
     /**
-     * Show the form for creating a new resource. Will render the page in its
-     * modal version if inside iframe; otherwise, renders normal version (default
-     * layout).
-     * 
-     * @param boolean $iframe Flag that indicates whether iframe version should
-     * be rendered or not.
+     * Show the form for creating a new resource.
      * 
      * @return Response
      */
@@ -31,11 +23,7 @@ class SessionController extends BaseController {
     }
     
     /**
-     * Store a newly created resource in storage. Likewise <i>create</i> method,
-     * uses a flag to indicate iframe usage. In case of errors, goes back to
-     * login page. Otherwise, goes to the intended page (that requires auth)
-     * 
-     * @param boolean $iframe Flag that indicates iframe usage.
+     * Store a newly created resource in storage.
      * 
      * @return  Response
      */
@@ -78,8 +66,9 @@ class SessionController extends BaseController {
     }
     
     /**
-     * Destroy the session (i.e. logs user out). Redirect to home page.
+     * Remove specified resource from storage.
      * 
+     * @param int $id
      * @return Response
      */
     public function destroy()

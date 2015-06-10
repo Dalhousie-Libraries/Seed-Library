@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Controller responsible for all back-end features related to the 'returns' table.
- *
- * Include CRUD for 'returns' table, with greater permissions than the front-end.
- */
 class AdminReturnController extends BaseController {
 
         /**
@@ -14,21 +9,16 @@ class AdminReturnController extends BaseController {
         protected $return;
     
 	/**
-         * Inject the models.
-         * (the controller is always instatiated by the framework, so there's no 
-         * need to call it in most situations)
-         * 
-         * @param Returning $return
-         */
+        * Inject the models.
+        * @param Returning $return
+        */
        public function __construct(Returning $return)
        {
            $this->return = $return;
        }
     
         /**
-	 * List all the registered returns.
-         * 
-         * @return Response
+	*   Display all the registered returns.
 	*/
         public function getIndex()
         {
@@ -39,7 +29,7 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-	 * Renders form for registering a new return.
+	 * Show the form for registering a new return.
 	 *
 	 * @return Response
 	 */
@@ -67,7 +57,7 @@ class AdminReturnController extends BaseController {
        }
         
         /**
-	 * Stores a newly registered return into the database.
+	 * Store a newly registered return into the database.
 	 *
 	 * @return Response
 	 */
@@ -78,6 +68,7 @@ class AdminReturnController extends BaseController {
                 'returner'      => 'required|min:3',
                 'parent_packet' => 'required|integer',
                 'amount'        => 'required|integer',
+				'return_date'  => 'required|date|date_format:"Y-m-d"|before:"now"',
             );
 
             // Validate the inputs
@@ -113,11 +104,11 @@ class AdminReturnController extends BaseController {
                 $this->return->amount           = Input::get('amount');
                 $this->return->description      = Input::get('description');
                 $this->return->accession_number = $this->return->getAccessionNumber();
-                $this->return->checked_in_date  = Carbon::now(); // Does it have to be the current day? I guess not... CHANGE IT!
+                $this->return->checked_in_date  = new Carbon(Input::get('return_date'));
 
                 // Was the return created?
                 if($this->return->save())
-                {
+                {	
                     // Redirect to the new return page
                     return Redirect::to('admin/returns/create')->with('success', 
                             'Return registered successfully! Click <a href="'. URL::to('admin/returns/'.$this->return->id.'/edit') .'">here</a> to add packets to it.');
@@ -132,10 +123,8 @@ class AdminReturnController extends BaseController {
 	}
         
         /**
-         * Renders return update form.
-         * 
-         * @param int $id Return id.
-         * @return Response
+        * Renders update form.
+        * @param int $id
         */
        public function getEdit($id)
        {
@@ -152,10 +141,8 @@ class AdminReturnController extends BaseController {
        }
        
        /**
-        * Updates return record.
-        * 
-        * @param int $id Return id.
-        * @return Response
+        * Updates user record.
+        * @param int $id
         */
        public function postEdit($id)
 	{
@@ -217,9 +204,8 @@ class AdminReturnController extends BaseController {
 	}
         
         /**
-	 * Renders form for checking in a return.
+	 * Show the form for checking in a return.
 	 *
-         * @param int $id Return id.
 	 * @return Response
 	 */
         public function getCheckIn($id)
@@ -236,7 +222,7 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-	 * Stores a newly checked in return into the database.
+	 * Store a newly checked in return into the database.
 	 *
 	 * @return Response
 	 */
@@ -280,9 +266,9 @@ class AdminReturnController extends BaseController {
 	}
         
         /**
-         * Retrieves all returns records formatted for DataTables.
+         *  Retrieve all returns records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getUserPackets($name)
         {
@@ -293,7 +279,10 @@ class AdminReturnController extends BaseController {
                              ->join('items', 'items.id', '=', 'accessions.item_id')
                              ->where('users.name', '=', $name)
                              ->whereNotNull('borrower_id')
-                             ->whereNotNull('checked_out_date');
+                             ->whereNotNull('checked_out_date')
+							 ->whereNotIn('packets.id', function($query){
+									$query->from('accessions')->select('parent_id')->whereNotNull('parent_id');
+								});
 
             return Datatables::of($returns)
 
@@ -308,9 +297,9 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-         * Retrieves all returns records formatted for DataTables.
+         *  Retrieve all returns records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getReturnedPackets()
         {
@@ -336,9 +325,9 @@ class AdminReturnController extends BaseController {
         }
         
         /**
-         * Retrieves all return requests records formatted for DataTables.
+         *  Retrieve all return requests records formatted for DataTables.
          * 
-         * @return JSON\Datatables
+         * @return Datatables JSON
          */
         public function getRequestedPackets()
         {

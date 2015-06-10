@@ -3,15 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/items/search.blade.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/routes.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/admin/donations/create_edit.blade.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/ItemController.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/Admin/AdminItemController.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/users/activate.blade.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/layouts/default.blade.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/login-modal.blade.php</file>
-            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/login.blade.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/public/assets/js/custom/image-gallery.js</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/site/items/show.blade.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/models/Accession.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/models/CMS/Posting.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/public/assets/css/custom/image-gallery.css</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/controllers/Admin/AdminImageController.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/public/assets/js/custom/mod-cart.js</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/models/CMS/Tag.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/models/Image.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/vendor/bkwld/croppa/src/config/config.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/views/admin/items/create_edit.blade.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/mysqld.log</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/app/models/Packet.php</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/public/assets/js/custom/util.js</file>
+            <file>file:/C:/xampp/htdocs/SeedLendingLibrary/public/assets/js/custom/services.js</file>
         </group>
     </open-files>
 </project-private>

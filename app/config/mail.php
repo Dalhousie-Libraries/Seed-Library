@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'smtp',
+	'driver' => 'sendmail',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.dal.ca',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'accounts@seedlending-dev.library.dal.ca', 'name' => 'Seed Lending Library Admin'),
+	'from' => array('address' => 'seed.library@dal.ca', 'name' => 'Seed Lending Library Admin'),
 
 	/*
 	|--------------------------------------------------------------------------
